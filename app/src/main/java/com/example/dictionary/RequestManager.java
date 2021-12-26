@@ -36,7 +36,7 @@ public class RequestManager {
                 public void onResponse(Call<List<APIrespone>> call, Response<List<APIrespone>> response) {
                     if(!response.isSuccessful())
                     {
-                        Toast.makeText(context,"Error",Toast.LENGTH_LONG).show();
+                        Toast.makeText(context,"Word does not exist",Toast.LENGTH_SHORT).show();
                         return;
                     }
                     listener.onFetchData(response.body().get(0),response.message());
